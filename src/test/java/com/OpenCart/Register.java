@@ -8,7 +8,7 @@ public class Register extends TestBase {
     public static void main(String[] args) {
         chromeLaunch();
         //TC_01_valid();
-       // TC_02_invalid();
+        //TC_02_invalid();
         TC_03_invalid();
 
     }

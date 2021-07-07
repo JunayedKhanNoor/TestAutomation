@@ -45,4 +45,9 @@ public class TestBase {
 
 
     }
+
+    public static void openTestURL(String URL) {
+        driver.get(URL);
+
+    }
 }
