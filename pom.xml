@@ -12,6 +12,9 @@
         <maven.compiler.source>13</maven.compiler.source>
         <maven.compiler.target>13</maven.compiler.target>
         <selenium-version>4.0.0-beta-4</selenium-version>
+        <faker-version>1.0.2</faker-version>
+        <commonIO-version>2.10.0</commonIO-version>
+        <aShot-version>1.5.4</aShot-version>
 
     </properties>
 
@@ -32,8 +35,22 @@
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
-            <version>1.0.2</version>
+            <version>${faker-version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commonIO-version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot -->
+        <dependency>
+            <groupId>ru.yandex.qatools.ashot</groupId>
+            <artifactId>ashot</artifactId>
+            <version>${aShot-version}</version>
+        </dependency>
+
+
 
     </dependencies>
 
