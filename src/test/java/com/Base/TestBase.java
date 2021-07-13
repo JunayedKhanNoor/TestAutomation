@@ -1,18 +1,19 @@
 package com.Base;
 
 import com.github.javafaker.Faker;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Locale;
 
 public class TestBase {
     public static WebDriver driver;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         chromeLaunch();
         chromeClose();
@@ -90,6 +91,13 @@ public class TestBase {
     }
     public static void clickByXpath(String locator){
         driver.findElement(By.xpath(locator));
+    }
+
+    public static void takeScreenshot(String name) throws IOException {
+        //take screenshot
+        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        //save image
+        FileUtils.copyFile(srcFile,new File("./src/test/Screenshots/"+name+".png"),true);
     }
 
 
